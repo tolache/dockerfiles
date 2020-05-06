@@ -7,3 +7,4 @@ RUN apt-get update && apt-get install -y make m4 curl \
   && rm -fr /tmp/*.deb \
   && rm -rf /usr/share/man/?? \
   && rm -rf /usr/share/man/??_*
+RUN usermod -l jetbrains -m -d /home/jetbrains root
