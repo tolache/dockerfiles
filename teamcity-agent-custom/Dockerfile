@@ -1,11 +1,12 @@
-FROM jetbrains/teamcity-agent:2020.2
+FROM jetbrains/teamcity-agent:2020.2.2
 
 USER root
 RUN apt-get update && apt-get upgrade -y
-RUN apt-get install -y iputils-ping nano htop telnet
+RUN apt-get install -y iputils-ping nano htop telnet wget
 
 # Install PowerShell
-RUN apt-get install -y wget apt-transport-https
+RUN apt-get update
+RUN apt-get install -y wget apt-transport-https software-properties-common
 RUN wget -q https://packages.microsoft.com/config/ubuntu/20.04/packages-microsoft-prod.deb
 RUN dpkg -i packages-microsoft-prod.deb
 RUN apt-get update
