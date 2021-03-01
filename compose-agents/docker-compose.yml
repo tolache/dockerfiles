@@ -7,18 +7,18 @@ services:
       - /home/jetbrains/docker/compose-agent-1:/data/teamcity_agent/conf
     environment:
       AGENT_NAME: compose_agent-1
-      SERVER_URL: "http://tola-ws2019.labs.intellij.net"
+      SERVER_URL: https://tolache.beta.teamcity.com/
   agent2:
     image: tolache/teamcity-agent-custom:2020.2.2
     volumes:
       - /home/jetbrains/docker/compose-agent-2:/data/teamcity_agent/conf
     environment:
       AGENT_NAME: compose_agent-2
-      SERVER_URL: "http://tola-ws2019.labs.intellij.net"
+      SERVER_URL: https://tolache.beta.teamcity.com/
   agent3:
     image: tolache/teamcity-agent-custom:2020.2.2
     volumes:
       - /home/jetbrains/docker/compose-agent-3:/data/teamcity_agent/conf
     environment:
       AGENT_NAME: compose_agent-3
-      SERVER_URL: "http://tola-ws2019.labs.intellij.net"
+      SERVER_URL: https://tolache.beta.teamcity.com/
