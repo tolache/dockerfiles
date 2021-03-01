@@ -4,21 +4,21 @@ services:
   agent1:
     image: "tolache/teamcity-agent-custom:2020.2.2"
     volumes:
-      - C:\Users\Anatoly.Cherenkov\Documents\docker\compose-agent-1:/data/teamcity_agent/conf
+      - /home/jetbrains/docker/compose-agent-1:/data/teamcity_agent/conf
     environment:
       AGENT_NAME: compose_agent-1
       SERVER_URL: "http://tola-ws2019.labs.intellij.net"
   agent2:
     image: tolache/teamcity-agent-custom:2020.2.2
     volumes:
-      - C:\Users\Anatoly.Cherenkov\Documents\docker\compose-agent-2:/data/teamcity_agent/conf
+      - /home/jetbrains/docker/compose-agent-2:/data/teamcity_agent/conf
     environment:
       AGENT_NAME: compose_agent-2
       SERVER_URL: "http://tola-ws2019.labs.intellij.net"
   agent3:
     image: tolache/teamcity-agent-custom:2020.2.2
     volumes:
-      - C:\Users\Anatoly.Cherenkov\Documents\docker\compose-agent-3:/data/teamcity_agent/conf
+      - /home/jetbrains/docker/compose-agent-3:/data/teamcity_agent/conf
     environment:
       AGENT_NAME: compose_agent-3
       SERVER_URL: "http://tola-ws2019.labs.intellij.net"
